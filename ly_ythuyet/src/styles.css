@@ -1,0 +1,13 @@
+.black {
+    background-color: #000000;
+    height: 100px;
+    width: 100px;
+  }
+  .white {
+    background-color: #ffffff;
+    height: 50px;
+    left: 25px;
+    position: relative;
+    top: 25px;
+    width: 50px;
+  }
