@@ -39,8 +39,11 @@ class App extends Component {
     if (this.state.isValid) {
       const newList = this.state.studentList.slice();
       if (this.state.indexSelected > -1) {
+        // console.log(this.state.indexSelected)
+
         newList[this.state.indexSelected] = this.state.form;
       } else {
+        console.log(11)
         newList.push({
           ...this.state.form,
           id: Date.now(),
@@ -89,7 +92,7 @@ class App extends Component {
             />
           </div>
           <button onClick={this.handleSubmit}>Submit</button>
-          <table>
+          <table border={1}>
             <thead>
               <tr>
                 <th>Name</th>
