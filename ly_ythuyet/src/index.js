@@ -1,38 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import Header from './Header';
-import Footer from './Footer';
+import * as React from "react";
+import ReactDOM from "react-dom/client"; 
+import { BrowserRouter } from "react-router-dom";
 
-const phone = 123456;
-const products = [
-  {
-    name: 'Iphone 1',
-    price: 2000,
-    color: 'red'
-  },
-  {
-    name: 'Iphone 2',
-    price: 2000,
-    color: 'red'
-  }
-]
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import NotFound from "./Pages/NotFound";
+import App from "./App";
 
-// Tao App
-function App(){
-  return (
-    <>
-      <Header name="CodeGym123" phone={phone} products={products}/>
-      <h1>Noi dung</h1>
-      <Footer />
-    </>
-  )
-}
-// Render App
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <App/>);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about/123">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/abc">NotFound</Link></li>
+    </ul>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about/:userId" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+     <Route component={NotFound}/>
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
