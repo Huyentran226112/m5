@@ -1,0 +1,43 @@
+.container {
+  width: 300px;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+input, textarea, button {
+  width: 100%;
+}
+
+.custom-input {
+  padding-bottom: 2%;
+}
+
+.custom-input-error label {
+  color: red;
+}
+
+.custom-input-error input {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.custom-input-error textarea {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  margin: 0;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.flex {
+  display: flex;
+}
