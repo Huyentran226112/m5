@@ -10,7 +10,7 @@ function UserShow(props) {
 
     useEffect( function(){
         axios
-            .get("https://6083df209b2bed00170404a0.mockapi.io/angular/users/"+id)
+            .get("https://642f6d7eb289b1dec4b2c047.mockapi.io/api/users"+id)
             // then: tra ve thanh cong 
             .then(res => {
                 setUser(res.data);

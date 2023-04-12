@@ -2,11 +2,12 @@ import Header from "../includes/Header";
 import Footer from "../includes/Footer";
 import Sidebar from "../includes/Sidebar";
 export default function LayoutMaster({ children }) {
+    const username ='NVA';
     return (
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <Header/>
+                    <Header username={username}/>
                 </div>
             </div>
             <div className="row">

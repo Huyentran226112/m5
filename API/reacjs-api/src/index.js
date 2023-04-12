@@ -5,12 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
+//Cung cấp store ở index.js hoặc App.js ( trước BrowserRouter )
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <BrowserRouter>
+     {/* <BrowserRouter>
     <App />
-     </BrowserRouter>
+     </BrowserRouter> */}
+      <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

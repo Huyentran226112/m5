@@ -2,7 +2,7 @@ import axios from "axios";
 
 class UserModel {
     constructor(){
-        this.api_url = 'https://6083df209b2bed00170404a0.mockapi.io/angular/users/';
+        this.api_url = 'https://642f6d7eb289b1dec4b2c047.mockapi.io/api/users';
     }
     getAll(){
         return new Promise( (resolve, reject) => {
@@ -42,6 +42,18 @@ class UserModel {
             });
         });
     }
+    update(data,id){
+        return new Promise( (resolve, reject) => {
+            axios
+            .put(this.api_url+'/'+id,data )
+            .then(res => {
+                resolve(res.data);
+            })
+            .catch(err => {
+                reject(err)
+            });
+        });
+    }
     delete(id){
         return new Promise( (resolve, reject) => {
             axios
@@ -54,5 +66,6 @@ class UserModel {
             });
         });
     }
+    
 }
 export default new UserModel();

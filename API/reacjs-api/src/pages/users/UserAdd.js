@@ -18,6 +18,7 @@ export default class PersonList extends React.Component {
     const user = {
       name: this.state.name
     };
+    // khai bao api 
     // axios
     // .post('https://6083df209b2bed00170404a0.mockapi.io/angular/users/',{ user })
     // .then(res => {
@@ -25,7 +26,7 @@ export default class PersonList extends React.Component {
     //     console.log(res.data);
     //     window.location.href = '/users'
     //   });
-
+// khai báo khi có api khi có model
     UserModel.store(user)
       .then(res => {
         window.location.href = '/users'

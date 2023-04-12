@@ -27,7 +27,7 @@ class UserIndex extends Component {
          })
         
         axios
-          .get("https://6083df209b2bed00170404a0.mockapi.io/angular/users/")
+          .get("https://642f6d7eb289b1dec4b2c047.mockapi.io/api/users")
           .then(res => {
             this.setState({ users: res.data });
           })

@@ -1,7 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
 import './grid.css';
 import LayoutMaster from "./layouts/LayoutMaster";
-
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
 import UserIndex from "./pages/users/UserIndex";
 import UserShow from "./pages/users/UserShow";
 import UserEdit from "./pages/users/UserEdit";
@@ -15,6 +16,8 @@ function App() {
     <LayoutMaster>
       <div className="App">
           <Routes>
+          <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/users" element={<UserIndex />} />
             <Route path="/users/:id/edit" element={<UserEdit />} />
             <Route path="/users/:id/delete" element={<UserDelete />} />
