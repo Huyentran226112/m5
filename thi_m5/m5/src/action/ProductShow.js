@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams }  from "react-router";
 import ProductModel from "../models/ProductModel";
 
 function ProductShow(props) {
   const { id } = useParams();
   const [products, setProducts] = useState({});
+
+
 
   useEffect(function () {
     ProductModel.find(id)
@@ -15,9 +17,11 @@ function ProductShow(props) {
         throw err;
       });
   }, []);
+ 
   return (
     <div>
-      Chi tiết sản phẩm
+        
+      <h1>Chi tiết sản phẩm</h1>
       <table border={1} width={"100%"}>
         <tr>
           <td>Id</td>

@@ -8,9 +8,9 @@ import ProductModel from '../models/ProductModel';
 
 const rules = Yup.object().shape({
     name: Yup.string().required('Không được để trống').min(3, 'Tối thiểu 3 kí tự').max(255, 'Tối đa 255'),
-    price: Yup.number().required('Không được để trống').min(3, 'Tối thiểu 3 kí tự'),
+    price: Yup.number().required('Không được để trống').min(3, 'Tối thiểu 8 số'),
     inventory: Yup.number().required('Không được để trống').min(3, 'Tối thiểu 8 số'),
-    description: Yup.string().required('Không được để trống').min(3, 'Tối thiểu 8 số').max(255, 'Tối đa 255'),
+    description: Yup.string().required('Không được để trống').min(3,'Tối thiểu 3 kí tự' ).max(255, 'Tối đa 255'),
 
 });
 function ProductAdd(props) {
@@ -40,7 +40,7 @@ function ProductAdd(props) {
                 throw err;
             });
 
-        // Làm rỗng formik
+   
     }
 
   
