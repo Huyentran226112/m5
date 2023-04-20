@@ -15,7 +15,9 @@ function ProductIndex(props) {
   }, []);
 
   const handleDelete = (id) => {
-    ProductModel.delete(id)
+    const isConfirmed = window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+    if (isConfirmed) {
+      ProductModel.delete(id)
       .then((res) => {
         // navigate("/");
         alert('ok.đã xóa rồi nha !!')
@@ -25,6 +27,7 @@ function ProductIndex(props) {
         console.log(err);
         alert("Đã có lỗi xảy ra ");
       });
+    }
   };
   return (
     <div>
@@ -56,7 +59,7 @@ function ProductIndex(props) {
                 </button>{" "}
                 ||
                 <button className="btn btn-warning">
-                  <Link to={"/Product/" + Product.id + "/edit"}>Edit</Link>
+                  <Link to={"/Product/" + Product.id + "/edit"}>cập nhật</Link>
                 </button>{" "}
                 ||
                 <button

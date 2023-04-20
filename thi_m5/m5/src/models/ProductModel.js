@@ -60,7 +60,6 @@ class ProductModel {
       axios
         .delete(this.api_url + "/" + id)
         .then((res) => {
-          alert('muốn xóa thật à :)')
           resolve(res.data);
         })
         .catch((err) => {
