@@ -42,8 +42,6 @@ function ProductAdd(props) {
 
    
     }
-
-  
 return (
     <div>
         <h1>Thêm sản phẩm </h1>

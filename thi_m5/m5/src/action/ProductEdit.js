@@ -17,11 +17,11 @@ const rules = Yup.object().shape({
 function ProductEdit(props) {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [selectedFile, setSelectedFile] = useState();
     const [formData, setFormData] = useState({
         name: '',
-        email:'',
-        phone:''
+        price:'',
+        inventory:'',
+        description:''
     })
     useEffect(() => {
         ProductModel.find(id)
